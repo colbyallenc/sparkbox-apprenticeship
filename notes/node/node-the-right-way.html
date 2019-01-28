@@ -1,0 +1,71 @@
+Part One
+Chapter 1
+
+~~~~~~Thinking Beyond the Web~~~~~~
+
+    -I/O-bound programs   :
+        - are constrained by data access. 
+        - e.g.. AJAX, REST, HTTP, web
+        -These are programs where adding more processing power or RAM often makes little difference
+
+    -Client-Side Programs  :
+        - interact directly with human beings
+        - e.g.. GUI tools of all stripes, consumer applications, mobile apps, and web apps
+
+    -Server-side programs  :      
+        - HTTP, Ajax,and REST, communicating with JSON
+        - websites, apps, and APIs live here
+
+~~~~~~~How Node.js Applications Work~~~~~~
+
+    - couples JavaScript with an event loop for quickly dispatching opera-tions when events occur
+
+    - Event loop :
+        1. load the programs
+        2. while theres more to do, wait for something to happen
+        3. execute callbacks
+        4. exit process unless theres more to do
+        - core feature of Node
+        - “everything runs in parallel except your code.”
+        - As long as there’s something left to do, Node.js’s event loop will keep spinning.
+        - Whenever an event occurs, Node.js invokes any callbacks (event handlers) that are listening for that event
+
+    Single-Threaded and Highly Parallel
+        -Node.js is a single-threaded environment (only one line of your code will ever be executing at any time)
+        -Rather than waiting line-by-line for an operation to finish, youcreate a callback function that will be invoked when the operation eventuallysucceeds or fails.
+
+
+~~~~~Aspects of Node.js Development~~~~~~~~
+
+    -Practical Programming:
+        - producing real code that does something useful
+
+    -Node.js Core: 
+        - How information is shuttled between these layersis the kind of impactful architectural detail you’ll learn.
+    
+    -JavaScriptisms:
+        - arrowfunctions, spread parameters, and destructuring assignment
+
+~~~~~~~~~Installing Node.js~~~~~~~~~
+
+    - $node--version
+        see what version you have installed
+    
+    -you can install nvm like so:
+        - $curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+
+    - Then install a specific version:
+        - $nvm install v8.0.0
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Part one
+Chapter 2
+
+~~~~~~~~~~ Wrangling the File System ~~~~~~~~~~~~

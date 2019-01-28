@@ -1,0 +1,20 @@
+# Make a directory and cd to it
+take() {
+  mkdir -p $@ && cd ${@:$#}
+}
+
+# git clone and cd to a repo directory
+clone() {
+  git clone --depth=1 $@
+  if [ "$2" ]; then
+    cd "$2"
+  else
+    cd $(basename "$1" .git)
+  fi
+  npm install
+}
+
+# Magic Project Opener
+repo() {
+  cd "$(~/dotfiles/bin/repo $1)"
+}
