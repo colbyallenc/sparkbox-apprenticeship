@@ -24,9 +24,11 @@ fs.readFile('word-frequency-finder.txt',  "utf-8", (err,data)=>{
         });
         return freqMap;
     }
-    
+    // call the funciton and pass the data
     let freq = wordFreq(data);
-
+    // es6 method to print out all of the keys:value pairs
+    // sort them
+    // print words/count to the terminal 
     Object.keys(freq).sort().forEach(function(word) {
         console.log(word + " : " + freq[word]);
     })
