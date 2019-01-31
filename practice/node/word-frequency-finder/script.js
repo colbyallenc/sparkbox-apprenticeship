@@ -30,7 +30,7 @@ fs.readFile('word-frequency-finder.txt',  "utf-8", (err,data)=>{
     // sort them
     // print words/count to the terminal 
     Object.keys(freq).sort().forEach(function(word) {
-        console.log(word + " : " + freq[word]);
+        console.dir(word + " : " + freq[word]);
     })
 
 });
