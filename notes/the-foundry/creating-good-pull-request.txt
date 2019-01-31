@@ -1,0 +1,29 @@
+If your code reviewer ain't happy, ain't nobody happy!!!!!!!!
+
+Why PR?:
+    Having good commit messages will aid in the reviewer 
+    seeing what is trying to be accomplished.
+
+Seperate your PR to be clear:
+    If the PR is doing too much, maybe it should be 
+    separated into multiple requests.
+
+    the word and generally means that this commit/pull request is doing too much
+
+Rebase: 
+    If you're not the only developer on the project, 
+    there's a good chance that other changes have been 
+    merged into master while you've been working
+
+    rebase your code to make sure that what you are 
+    submitting includes the most recent changes
+
+    it may be better to have one commit in the history, 
+    like "feat: Adds homepage slider."                          
+                                                                    |
+    before I submit the PR, do a "git rebase -i master" (interactive rebase) 
+                                             |
+                            This allows me to combine my commit messages for this 
+                            feature into one final message.
+
+        
