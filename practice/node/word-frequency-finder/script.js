@@ -12,10 +12,11 @@ fs.readFile('word-frequency-finder.txt',  "utf-8", (err,data)=>{
                                 // /\s/ splits the array at every kind of whitespace character
                         //         |
         let words = string.split(/\s/);
+        // create an empty object
         let freqMap = {};
-
         // store the # of occurences
         words.forEach(function(w) {
+            // if there are no occurences, that current word = 0
             if (!freqMap[w]) {
                 freqMap[w] = 0;
             }
