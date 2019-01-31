@@ -2,14 +2,14 @@
 const fs = require('fs');
 
 fs.readFile('parsing-data-file.txt',  "utf-8", (err,data)=>{
+    // callback
     if(err){
         throw err;
     }
-      //Init
-    let str = "Last, First, Salary";
+    //Init
     var regex = new RegExp(',', 'g');
 
-    // order
+    // sort the list
     const dataArr = data.split("\n"); 
     dataArr.sort((a,b)=> {
         if(a<b) return -1;  
@@ -17,6 +17,8 @@ fs.readFile('parsing-data-file.txt',  "utf-8", (err,data)=>{
             return 0;
     })
     let listData =dataArr.join('\n');
+
+    let str = "Last, First, Salary";
 
     //replace via regex
     str = str.replace(regex, '      ');
