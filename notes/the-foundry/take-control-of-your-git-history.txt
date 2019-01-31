@@ -1,0 +1,35 @@
+!-- Rebase -->
+$git pull --rebase while in master
+        -   To get square and assure that any commits 
+            I alone have are reapplied atop those 
+            coming from origin
+
+$git rebase master
+        -   rebase our PR branch the same reason we used --rebase: 
+            we want to ensure that our changes are reapplied on 
+            top of any changes already integrated into origin/master 
+            (the Hub of our collaboration)
+
+
+<!-- Merge -->
+we likely want master to look like the branch underlying this pull request
+
+$git merge --ff-only <branch-name>
+        -   merged in the pull request locally
+
+--ff-only :
+        -   Refuse to merge and exit with a non-zero status 
+            unless the current HEAD is already up to date or 
+            the merge can be resolved as a fast-forward
+        -   By including this flag, though, we’re telling 
+            git we want this to fail if it’s not a fast forward
+
+<!-- Push -->
+$ git push && git push origin :<branch-name> && git branch -d <branch-name>
+                |
+                git push origin :<branch-name>, will delete a remote branch
+
+<!-- git poosh plugin (oh-my-zsh) -->
+$ gpp <branch-name>
+        -   will push the current branch and delete the remote and 
+            local feature branches, with branch autocomplete 
