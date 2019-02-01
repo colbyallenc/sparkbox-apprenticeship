@@ -9,3 +9,47 @@
 // // must return 0
 // cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000});
 
+// must return 0
+// cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000});
+
+cakes({flour: 500, sugar: 200, eggs: 1}, {sugar: 1200, eggs: 5, flour: 1200}); 
+
+
+function cakes(recipe, available){
+
+  let entries = Object.entries(recipe).sort()
+  let availableEntries = Object.entries(available).sort()
+  
+
+  let a = Object.keys(recipe).sort()
+  let b = Object.keys(available).sort()
+
+//compare to see if the keys in recipe match with available
+  let i = a.length
+
+  if (i != b.length) return false;
+
+    while (i--) {
+        if (a[i] !== b[i]) return false;
+        }
+
+   let d= Object.values(recipe)
+   let c = Object.values(available)
+
+      console.log(d)
+      console.log(c)
+
+    let result = c.map(function(n, i) { return n / d[i]; });
+    console.log(result)
+// divide available/receipe
+
+
+// store the lowest quotent
+// let howManyCakes = 
+
+
+}
+
+
+  
+  
