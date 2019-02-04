@@ -22,6 +22,7 @@ switch (difficulty){
             numOfGuesses ++
         } else {
             console.log("You've got it")
+            console.log("Number of Guesses  : " + numOfGuesses)
             correctGuess = true
         }
 
@@ -39,6 +40,7 @@ switch (difficulty){
                 numOfGuesses ++
             } else {
                 console.log("You've got it")
+                console.log("Number of Guesses  : " + numOfGuesses)
                 correctGuess = true
             }
     
@@ -57,6 +59,7 @@ switch (difficulty){
                 numOfGuesses ++
             } else {
                 console.log("You've got it")
+                console.log("Number of Guesses  : " + numOfGuesses)
                 correctGuess = true
             }
     
