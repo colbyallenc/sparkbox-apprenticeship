@@ -4,23 +4,22 @@ const readlineSync = require('readline-sync');
 
 const difficulty = readlineSync.question('Level of Difficulty : ');
 
-let correctGuess = false;
-
 switch (difficulty){
     case "hard":
-        randomGuess(1000)
+        randomGuess(Math.floor(Math.random() * Math.floor(1000))) 
     break;
     case "medium":
-        randomGuess(100)
+        randomGuess(Math.floor(Math.random() * Math.floor(100)))
     break;
     case "easy":
-        randomGuess(10)
+        randomGuess(Math.floor(Math.random() * Math.floor(10)))
     break;
 }
 
 
 function randomGuess(randomNum){
     let numOfGuesses = 0 
+    let correctGuess = false;
     while (correctGuess=== false){
         const guess = readlineSync.question('Guess the Number : ');
         if(guess > randomNum){
