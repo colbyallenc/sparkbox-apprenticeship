@@ -7,11 +7,11 @@ fs.readFile('word-frequency-finder.txt',  "utf-8", (err,data)=>{
         throw err;
     }
 
-    function wordFreq(string) {
+    function wordFreq(data) {
                                   // " "   splits the array at one single space character.
                                 // /\s/ splits the array at every kind of whitespace character
                         //         |
-        let words = string.split(/\s/);
+        let words = data.split(/\s/);
         // create an empty object
         let freqMap = {};
         // store the # of occurences
@@ -36,3 +36,23 @@ fs.readFile('word-frequency-finder.txt',  "utf-8", (err,data)=>{
 
 });
 
+
+// another version of the same problem. 
+
+
+// let s = data.replace(/\n/g," ").split(" ")
+// let t = {};
+
+// for (var i = 0; i < s.length; i++){
+
+//     if (s[i] in t){
+//       t[s[i]] ++
+//     } 
+
+//     else{
+//      t[s[i]] = 1
+//     }
+  
+// }
+
+// console.log(t)
