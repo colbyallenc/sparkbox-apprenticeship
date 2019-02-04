@@ -2,22 +2,31 @@
 const fs = require('fs');
 const readlineSync = require('readline-sync');
 
-
-
 const difficulty = readlineSync.question('Level of Difficulty : ');
-let numOfGuesses = 0 
+
 let correctGuess = false;
 
 switch (difficulty){
     case "hard":
-        let hardRandomNum= Math.floor(Math.random() * Math.floor(1000));
-        
+        randomGuess(1000)
+    break;
+    case "medium":
+        randomGuess(100)
+    break;
+    case "easy":
+        randomGuess(10)
+    break;
+}
+
+
+function randomGuess(randomNum){
+    let numOfGuesses = 0 
     while (correctGuess=== false){
         const guess = readlineSync.question('Guess the Number : ');
-        if(guess > hardRandomNum){
+        if(guess > randomNum){
             console.log("Too High")
             numOfGuesses ++
-        } else if(guess < hardRandomNum){
+        } else if(guess < randomNum){
             console.log("Too Low")
             numOfGuesses ++
         } else {
@@ -27,43 +36,6 @@ switch (difficulty){
         }
 
     }
-    break;
-    case "medium":
-        let medRandomNum= Math.floor(Math.random() * Math.floor(100));
-        while (correctGuess=== false){
-            const guess = readlineSync.question('Guess the Number : ');
-            if(guess > medRandomNum){
-                console.log("Too High")
-                numOfGuesses ++
-            } else if(guess < medRandomNum){
-                console.log("Too Low")
-                numOfGuesses ++
-            } else {
-                console.log("You've got it")
-                console.log("Number of Guesses  : " + numOfGuesses)
-                correctGuess = true
-            }
-    
-        }
 
-    break;
-    case "easy":
-        let easyRandomNum= Math.floor(Math.random() * Math.floor(10));
-        while (correctGuess=== false){
-            const guess = readlineSync.question('Guess the Number : ');
-            if(guess > easyRandomNum){
-                console.log("Too High")
-                numOfGuesses ++
-            } else if(guess < easyRandomNum){
-                console.log("Too Low")
-                numOfGuesses ++
-            } else {
-                console.log("You've got it")
-                console.log("Number of Guesses  : " + numOfGuesses)
-                correctGuess = true
-            }
-    
-        }
-    
-    break;
+
 }
