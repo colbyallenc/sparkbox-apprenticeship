@@ -1,0 +1,35 @@
+Prelude: Values and Expressions 
+
+Values are Expressions-- 
+All values are Expressions
+
+JS valueles (primitivate types):
+                String
+                Number
+                Boolean
+
+Values and Identity--
+=== identical 
+!== not identical
+
+Value types--
+[] Array (List or Vector) 
+________________________________
+Basic Numbers -- 
+
+Literal: a notation for representing a fixed valueles
+Atomic Values: (e.g.. intergers, floating-point numbers, and strings)
+Anonymous function: a literal for the function types
+Octal Literal: 
+Double precision floating point numbers**
+
+- JS has a collection of literals
+
+
+floating -- 
+numbers are represented internally as floating point
+
+operations on numbers -- 
+in JS, operators have order of precedence (PEMDAS)
++, -, *, and /
+% modulus 
