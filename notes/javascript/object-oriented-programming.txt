@@ -1,0 +1,231 @@
+Object Oriented Programming
+2-5 yock, gary
+_______________________________
+SOLID:
+
+(S)ingle Responsibility Principle : 
+    the class that does one thing well. 
+    a single small classes that does one thing well
+    you should be able to modularly add and replace parts
+
+(O)pen/closed principle : 
+    your classes should be open for extension but closed for modification
+
+(L)iskov Substituation Principle (Duck typing- responds in a consistent way) : 
+    Your classes should act as complete replacements for eachother/ 
+
+(I)nterface Segregation Principle : 
+    no client should be forced to depend on methods it does not use
+
+(D)ependecny Inversion Principle : 
+    we dont want our code to define its own dependencies
+
+______________________________________________________________
+
+Single Responsibility class example:
+
+classes have both state (things we give it) and behavior (action)
+classes let us pass info and reuse it across what the class is doing
+
+    class EnglishGreeter {
+        constructor (name){
+            this.name = name;
+        }
+        greet(){
+            return `hello, ${this.name}!`
+        }
+    }
+
+const greeter = new Greeter("Colby")
+
+this class has a single responsibility*
+
+a way to inject that initial state (initialization)
+___________________________________________________________________
+
+Open/closed principle class example:
+
+  class EnglishGreeter {
+        constructor (name){
+            this.name = name;
+        }
+        greet(){
+            return `hello, ${this.name}!`
+        }
+    }
+
+
+    class SpanishGreeter extends Greeter {
+        greet(){
+            return `hola, ${this.name}!`
+        }
+
+        getTemperature(){
+
+        }
+
+    }
+
+extends means that the spanish greeter gets everything that the greeter got
+you dont have to rdefine the Greeter constructor
+you can extend the class and give it new behavior / you cannot modify a class
+
+_________________________________________________________________________________
+
+Liskov Substituation Principle class example:
+
+
+  class EnglishGreeter {
+        constructor (name){
+            this.name = name;
+            this.greetings = 0
+        }
+        greet(){
+            this.greetings += 1;
+            return `hello, ${this.name}!`
+        }
+
+        getGreetingsCount(){
+            return this.greetings;
+        }
+    }
+
+
+    class SpanishGreeter extends Greeter {
+        greet(){
+            [missing counter] - > Liskov Violation
+            return `hola, ${this.name}!`
+        }
+
+    }
+
+Violation of the liskov principle .. theres a conflict between SpanishGreeter and regular Greeter
+
+____________________________________________________________________________________________________
+
+Interface Segregation Principle class example:
+
+interface Greeter {
+    greet();
+    getGreetingCount();
+}
+
+ class EnglishGreeter implements Greeter {
+        constructor (name){
+            this.name = name;
+            this.greetings = 0
+        }
+        greet(){
+            this.greetings += 1;
+            return `hello, ${this.name}!`
+        }
+
+        getGreetingsCount(){
+            return this.greetings;
+        }
+    }
+
+
+    class SpanishGreeter implements Greeter {
+        greet(){
+            this.greetings += 1;
+            return `hola, ${this.name}!`
+        }
+        
+        getGreetingsCount(){
+            return this.greetings;
+        }
+
+    }
+
+    anywhere thta i want to use a greeter i should be able to declare "use Greeter"
+
+    function sendEnglishGreeting(EnglishGreeter greeter){
+        greeter.greet();
+        return greeter.getGreetingCount();
+    }
+
+    function sendSpanishGreeting(SpanishGreeter greeter){
+        greeter.greet();
+        return greeter.getGreetingCount();
+    }
+
+____________________________________________________________________________________________________
+    
+Dependecny Inversion Principle  class example:
+
+    - we can get in trouble by creating new objects inside of other objects
+
+     class Greeter {
+        constructor (name, language){
+            this.name = name;
+            this.greetings = 0
+            this.language = language
+        }
+        greet(){
+            this.greetings += 1;
+            return `${this.language.greeting()}, ${this.name}!`
+        }
+
+        getGreetingsCount(){
+            return this.greetings;
+        }
+    }
+
+    class formalEnglishLanguage {
+        greeting(){
+            return "hello";
+        }
+        goodbye(){
+
+        }
+    }
+
+
+greeter = new Greeting("Colby", new formalEnglishLanguage)
+
+create a new instanse of this object and save it
+
+say you want to interact with the database?
+
+get rid of "new" inside curly braces
+
+____________________________________________________________________________________________________
+POST REVIEW NOTES:
+
+- functional programming design: your state is global and you pass functions aorund
+- object oriented design:
+- different way of managing complexity 
+
+
+* default parameters * when you provide the default parameter * can help in refactoring
+                                            |
+ class Greeter {                            |
+        constructor (name, language = new formalEnglishLanguage){
+            this.name = name;
+            this.greetings = 0
+            this.language = language
+        }
+        greet(){
+            this.greetings += 1;
+            return `${this.language.greeting()}, ${this.name}!`
+        }
+
+        getGreetingsCount(){
+            return this.greetings;
+        }
+    }
+
+    class formalEnglishLanguage {
+        greeting(){
+            return "hello";
+        }
+        goodbye(){
+
+        }
+    }
+
+    greeter = new Greeter("Colby", new SpanishFormalLanguage)
+                                                |
+                                        it will not use the default since you specified here    
+
