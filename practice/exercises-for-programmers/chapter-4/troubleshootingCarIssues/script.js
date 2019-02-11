@@ -5,6 +5,9 @@ const readlineSync = require('readline-sync');
 let carSilent = readlineSync.question('Is the car silent when you turn the key? ')
 let batteryCorroded, clickingNoises, failStart, startAndDie, fuelInjection
 
+//when i tried to use else statements, things from other if statements 
+// would print that werent supposed to -- this is why i put a bunch of ifs and no elses
+
 if(carSilent == 'yes'){
     batteryCorroded = readlineSync.question('Are the battery terminals corroded? ')
     } 
