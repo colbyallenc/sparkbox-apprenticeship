@@ -1,0 +1,46 @@
+           Functional programmer: (noun) One who names variables "x", names functions "f", and names code patterns "zygohistomorphic prepromorphism"
+
+Chapter 1: 
+Why Functional Programming?
+
+    FP programs often have fewer bugs, 
+        and the bugs that do exist are usually in more obvious places, 
+        so they're easier to find and fix. 
+    
+    FP code tends to be more bug-resistant -- 
+        certainly not bug-proof, though.
+
+
+    Focus a lot more on the readability of our code*
+        Readability is actually most impacted by familiarity.
+
+    The increase in code familiarity, & the expediency of that recognition, will improve code readability.
+
+    Functional Programming (at least, without all the terminology weighing it down) is one of the most effective tools for crafting readable code. 
+        That is why it's so important.
+
+________________________________________
+
+Readability
+
+    Imperative code -- describes the code most of us probably already write naturally; 
+        -- it's focused on precisely instructing the computer how to do something. 
+    
+    Declarative code -- the kind we'll be learning to write, which adheres to FP principles     
+        -- is code that's more focused on describing the what outcome.
+
+________________________________________
+
+
+YAGNI principle
+    "You Ain't Gonna Need It". 
+    
+    This principle primarily comes from extreme programming, 
+    and stresses the high risk and cost of building a feature before it's needed.
+
+________________________________________
+
+The best code is the code that is most readable in the future because it strikes 
+exactly the right balance between what it can/should be (idealism) and what it must be (pragmatism).
+    
+
