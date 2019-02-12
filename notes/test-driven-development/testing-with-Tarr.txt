@@ -1,0 +1,109 @@
+Test Driven Development
+2/12 - Tarr and Gary
+________________________________________
+Why Test?
+
+    - an approach to development which emphasizes test-first development. 
+    - TDD is a programming technique. 
+    - the goal of TDD is to write clean code that works.
+
+________________________________________
+Mocha 
+
+    - Testing Framework 
+    -  gives us a lot of tools 
+    - in the package.json, make sure in the script you include mocha :
+
+            script: {
+                test: 'mocha'
+            }
+
+    - DSL (domain-specific language) to define how you write the test
+    - 'describe' is a js function 
+
+    - example: 
+
+            describe('shopping cart', ()=>{
+
+                    beforeEach(()=>{
+                        shoppingCart = New ShoppingCart();
+                    })
+
+                    it('provides an item count', ()=> {
+                        shoppingCart.addItem('adds item to the shopping cart using the New ShoppingCart')
+                    } )
+
+                    it('pending test', ()=>{}) //example of a pending test
+
+                    expects(shoppingCart.itemCount).to.equal(2);
+
+                    afterEach(()=> {
+                        db.reset()
+                    })
+
+                    xit('does something else', ()=>{
+                        //pending test
+                    })
+
+                }
+            )
+
+
+    - beforeEach():
+        allows you to not mud up any of the objects and not impacted by other it statements. 
+        it creates new instances of that function passed everytime its called
+    - afterEach() :
+         farely rare usage but in the case that you would have to empty out or reset something
+    
+    - Two ways to make pending test 
+            1. xit 
+            2. passing no function in an 'it' statement
+
+________________________________________
+Expectations and Matchers 
+
+    - Chai gives you functions to put in the 'it' blocks-- 
+        you can write them almost like a sentence 
+
+    - things we have avaiable to use inside of the 'it' blocks
+
+    -equal.to  --  
+        - compare objects or primitives x and y and passes if they are the same object 
+
+        -example:
+                let a = { 'red': 1 }
+                let b = a
+
+                //will pass
+                expect(getProperties(a)).to.equal.(a)
+
+                //will pass
+                expect(getProperties(a)).to.equal.(b)
+
+                //will not pass because this is an instance of a completely new object though they seemingly look the same, they are not identical
+                expect(getProperties(a)).to.equal.({ 'red': 1 })
+
+    not.to.equal -- 
+    compare objects ir primitives z and y and passes if they are not the same
+
+________________________________________
+Testing Boundaries 
+
+    - Mow your own yard
+        test the things that you are trying to test right now (foundry post by tarr - read)
+
+    - Scope your test to just what youre working own and write your test first
+
+
+________________________________________
+POST TALK DISCUSSION:
+
+Resources:
+    Chai Matchers Reference- chaijs.com/api/bdd
+
+types of test:
+    unit test*
+    component test
+    integration test
+    automated acceptance test *(chap 4 exercise)
+    mocking
