@@ -9,18 +9,20 @@ cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flo
 // must return 2
 cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1000, sugar: 1200, eggs: 5, milk: 200}); 
 
-function cakes (recipe, avaiable){
+function cakes (recipe, available){
   // store the keys as a new Array in order to compare them
   let recipeArr = Object.keys(recipe)
-  let availableArr = Object.keys(avaiable)
+  let availableArr = Object.keys(available)
   // storage of quotients when dividing avaiable/recipe
   let howManyCakes = []
     //check to see if avaiable includes recipe
     if(!availableArr.includes(...recipeArr)){
-        return 'you can make : 0 cakes'
+        return 0
       } else {
-         for (let val in avaiable) {
-           howManyCakes.push(avaiable[val]/recipe[val])
+        // this for loop gives me access to avaiable and recipe values
+         for (let val in available) {
+          //  divide the avaiable by the recipe and round down
+           howManyCakes.push(Math.floor(available[val]/recipe[val]))
         }
       }
     //sort the numbers in order to print the lowest number
@@ -28,3 +30,4 @@ function cakes (recipe, avaiable){
     // return lowest number in sorted list
     return howManyCakes[0]
 }
+
