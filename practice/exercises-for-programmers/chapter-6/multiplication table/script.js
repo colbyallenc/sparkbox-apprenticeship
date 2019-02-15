@@ -5,9 +5,7 @@ for(var i=0; i<=12; i++){
     }
 }
 
-
 // Alternative ( Possibly Better) Solution
-
             // prints out numbers 1-12 as an array
 let table = [...Array(13).keys()];
 
