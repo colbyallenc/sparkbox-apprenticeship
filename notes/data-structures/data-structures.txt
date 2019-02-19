@@ -1,0 +1,46 @@
+Data & Data Structures
+02.19.19
+Patrick Simpson
+_____________________________________________
+Data
+    Data is contextless information. 
+    "Data" can be stored in several different ways but eventually given context by typing 
+    (Typing, Type, Data Types)
+
+    All primitives (except for null and undefined) are objects
+
+    falsey values: 
+        undefined, null, NAN, 0, (empty string), false
+
+    lexical scoping (why IFFE extist):
+        all of the things on the outside of the functions for in,
+        but everything inside of that function only exists inside
+
+    in javascript, no 2 arrays will ever be equal. you have to compare the values inside
+
+    Everything in javascript is an object. 
+
+
+_____________________________________________
+Big O Notation
+
+    performance 
+    youll know how fast your things are running
+    how many times it the algorithm gonna run when i run it?
+    time complexity of a given algorithm 
+
+time complexity 
+    |
+    O(n)   - function ran one time and completed
+    O(1)   - what you want to strive for (runs one time)/ accessing an array is O(1)- getting the value and not iterating 
+    O(n^2) - example would be a nested loop
+
+localStorage is similar to what a hashtable is 
+
+
+_____________________________________________
+Design Patterns
+
+    how to create different behaviors or implementations within a program
+    observable is an example of a design Patterns
+    common names we've given to 
