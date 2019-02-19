@@ -8,5 +8,7 @@ a few extra seconds never killed anyone.... or did it?!?
 
 
 02.19.19
-
+having trouble trying to figure out why my github is showing commit by 2 users.. 
+i tried : git config --global user.email 'my email'
+lets see if this works
 
