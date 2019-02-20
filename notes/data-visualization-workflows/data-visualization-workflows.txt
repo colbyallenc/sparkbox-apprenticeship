@@ -1,0 +1,63 @@
+It takes many tools to do Data Visualizaition
+_____________________________________________
+Workflow
+    01- Exploring with tableau
+    02- Prototyping wit codepen and D3
+    03- Production with REACT
+
+    01 Tableau Prototyping (free public tool)
+            Cons
+                too wide for mobile
+                storytelling
+
+    02 D3
+        - D3 tutorial for documentation
+        - 'D3 is Not a Data Visualization Library' by Elijah Meeks (medium post)
+        - Modular D3- 
+
+    03 Refer to Github *
+_____________________________________________
+Workflow
+    01 Tilegram and IIllustrtator (Affinity Designer)
+    02 SVG OMG - Cool web based 
+    03 Angular and SVG (typescript, SVG Component)
+
+    01 Tilegrames
+    How do you take D# code and integrate it?
+        (look into vue.js? maybe? 
+                --> good for computed properties, 
+                filtering data, and reusable path genetator 
+                (taking shape files and convert it into sgv))
+                    |
+                takes a set of longitude and latitude and uses it for 
+                drawing commands that svg renders 
+    03
+_____________________________________________
+Radar Charts (Comparisons)
+
+    Built in radar charts in libraries like :
+        Chart.js
+        React-vis
+        PLot.Ly
+        Highcharts
+
+    Workflow
+        01 Develop and Tweak
+        02 
+        03
+
+
+_____________________________________________
+**Talk Resources 
+
+- 'D3 is Not a Data Visualization Library' 
+    by Elijah Meeks (medium post)
+
+- Sarah Swedan (talks on SVG)
+
+- github/bowmanmc/dvworkflows
+
+
+
+
+
