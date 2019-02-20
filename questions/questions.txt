@@ -1,0 +1,12 @@
+
+(check)#do i need this dot line in my alias dotfile???????
+alias dot='/usr/bin/git --git-dir=/Users/colbyallen/.dotfiles/ --work-tree=/Users/colbyallen'
+
+(check)#how often wold you create filesystems day to day?
+
+(check)#better practice to use synchronous file access during initialization phase of my program?
+    In the initialization phase of a project, just the basic files are running which means that
+
+#why do people fall functions classes?
+are they really cllasses? 
+
