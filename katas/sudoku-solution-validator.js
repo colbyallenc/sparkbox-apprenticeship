@@ -30,7 +30,7 @@ class Sudoku {
     let cell8 = []
     let cell9 = []
     // an array of arrays of all the cells
-    let cell = [cell1, cell2,cell3,cell4, cell5, cell6,cell7, cell8, cell9]
+    let arrOfCells = [cell1, cell2, cell3, cell4, cell5, cell6,cell7, cell8, cell9]
 
     // these are all the cases of 3x3 cells on a sudoku board
     for(let i = 0; i <= 2; i++){
@@ -80,9 +80,9 @@ class Sudoku {
     }
       // check to see if all cells have nums 1-9
    //loop through each array 
-    for(let i=0; i<= cell.length; i++){
+    for(let i=0; i<= arrOfCells.length; i++){
       // set row numbers to current row
-      let currentCell = cell[i];
+      let currentCell = arrOfCells[i];
         //  check to see if all rows have nums 1-9
       let doAllNumbersExist = this.numOneToNine.every((numbers)=>{
         return currentCell.includes(numbers)
@@ -102,7 +102,7 @@ class Sudoku {
 
 let newGame = new Sudoku();
 
-newGame.checkCells([
+newGame.validSolutionCheck([
   [5, 3, 4, 6, 7, 8, 9, 1, 2],
   [6, 7, 2, 1, 9, 5, 3, 4, 8],
   [1, 9, 8, 3, 4, 2, 5, 6, 7],
