@@ -23,9 +23,15 @@ describe('Sudoku Game Tests' ,()=>{
     });
 
     describe('Check Columns' ,()=>{
+<<<<<<< HEAD
         it('should require a valid input', ()=>{
             expect(checkColumns()).to.equal(typeof 'object')
         });
+=======
+        // it('should require a valid input', ()=>{
+        //     expect(checkColumns()).to.equal(typeof 'object')
+        // });
+>>>>>>> feat: Returns Columns into new Arr w/ test
 
         describe('Check Columns Class returns a boolean' ,()=>{
             it('should return true', ()=>{
@@ -63,5 +69,9 @@ describe('Sudoku Game Tests' ,()=>{
 
     });
 
+<<<<<<< HEAD
 });
 >>>>>>> Stashed changes
+=======
+});
+>>>>>>> feat: Returns Columns into new Arr w/ test
