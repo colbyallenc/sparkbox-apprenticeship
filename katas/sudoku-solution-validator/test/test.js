@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 const { SudokuValidator } = require('../src/sudoku-solution-validator.js');
 const { checkColumns } = require('../src/checkColumns.js')
 const { expect } = require('chai');
