@@ -30,20 +30,21 @@
 //   [3, 0, 0, 4, 8, 1, 1, 7, 9]
 // ]); // => false
 
-class Sudoku {
+class SudokuValidator {
   constructor(board){
     this.board = board;
     // numbers 1-12 printed in an array
     this.numOneToNine=[...Array(10).keys()].slice(1)
   }
 
-  validateBoard(){
+  validateBoard(){ 
     checkCells(this.board); // return boolean
     checkRows(this.board); // return boolean
     checkColumns(this.board); //return boolean
-
     // checks if checkRows() and checkCells() are both true
     return this.checkRows(board) == true && this.checkCells(board) == true && this.checkColumns(board) == true ? true:false
   }
 
 }
+
+module.exports = { SudokuValidator }
