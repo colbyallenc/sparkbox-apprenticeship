@@ -25,4 +25,10 @@ biggest takeaway: lets bring back data visualization.. im into that.
                 *refer to data-visualization in notes
 
 
+02.26.19
+Lately I've been working with iterating over matrices. Theres been so much to 
+discover here for example. How will you choose to iterate over this array of 
+arrays? You have so many methods including older more prestegious es5 methods, 
+or our very convenient es6 methods. 
+
 
