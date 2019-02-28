@@ -1,3 +1,8 @@
+const { columnArray } = require('../src/checkColumns.js');
+const { rowArray } = require('../src/checkRows.js');
+const { cellArray } = require('../src/checkCells.js');
+const { arrayIsValid } = require('../src/arrayIsValid.js');
+
 // Sudoku Background
 // Sudoku is a game played on a 9x9 grid. The goal of the game is to fill all cells of the grid with digits from 1 to 9, so that each column, each row, and each of the nine 3x3 sub-grids (also known as blocks) contain all of the digits from 1 to 9. 
 
@@ -33,18 +38,39 @@
 class SudokuValidator {
   constructor(board){
     this.board = board;
-    // numbers 1-12 printed in an array
-    this.numOneToNine=[...Array(10).keys()].slice(1)
+    this.rowCheck = rowArray();
+    this.columnCheck = columnArray();
   }
 
-  validateBoard(){ 
-    checkCells(this.board); // return boolean
-    checkRows(this.board); // return boolean
-    checkColumns(this.board); //return boolean
-    // checks if checkRows() and checkCells() are both true
-    return this.checkRows(board) == true && this.checkCells(board) == true && this.checkColumns(board) == true ? true:false
+    validateBoard(){ 
+      let rowChecker = arrayIsValid(this.board, this.rowCheck); // returns boolean
+      let columnChecker = arrayIsValid(this.board, this.columnCheck) //
+
+
+      if(rowChecker == true && columnChecker == true) {
+        console.log('Board is Validated'); 
+        return 'Board is Validated' 
+      } 
+        console.log('Board is Invalid')
+        return 'Board is Invalid'
+      // checks if checkRows() and checkCells() are both true
+    }
+
   }
 
-}
+
+const myboard = new SudokuValidator([
+  [5, 3, 4, 6, 7, 8, 9, 1, 2],
+  [6, 7, 2, 1, 9, 5, 3, 4, 8],
+  [1, 9, 8, 3, 4, 2, 5, 6, 7],
+  [8, 5, 9, 7, 6, 1, 4, 2, 3],
+  [4, 2, 6, 8, 5, 3, 7, 9, 1],
+  [7, 1, 3, 9, 2, 4, 8, 5, 6],
+  [9, 6, 1, 5, 3, 7, 2, 8, 4],
+  [2, 8, 7, 4, 1, 9, 6, 3, 5],
+  [3, 4, 5, 2, 8, 6, 1, 7, 9]
+]);
+
+myboard.validateBoard();
 
 module.exports = { SudokuValidator }
