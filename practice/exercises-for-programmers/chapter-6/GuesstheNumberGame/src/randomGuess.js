@@ -1,40 +1,36 @@
-'use strict';
 const fs = require('fs');
 const readlineSync = require('readline-sync');
 
-console.log("Lets Play a Game >:) ")
+console.log("Lets Play a Game >:) ...")
 
 // switch case for the type of game the user wants to play
-const difficulty = readlineSync.question('Pick a Level of Difficulty (1, 2, or 3) : ');
-switch (difficulty){
+const levelOfDifficulty = readlineSync.question('Pick a Level of Difficulty (1, 2, or 3) : ');
+switch (levelOfDifficulty){
     case "3":
-        randomGuess(Math.floor(Math.random() * Math.floor(1000))) 
+        randomGuess(Math.floor(Math.random() * Math.floor(1000))) //guess between 1-1000
     break;
     case "2":
-        randomGuess(Math.floor(Math.random() * Math.floor(100)))
+        randomGuess(Math.floor(Math.random() * Math.floor(100))) //guess between 1-100
     break;
     case "1":
-        randomGuess(Math.floor(Math.random() * Math.floor(10)))
+        randomGuess(Math.floor(Math.random() * Math.floor(10))) //guess between 1-10
     break;
 }
 
 
 function randomGuess(randomNum){
     // game variables
-    let numOfGuesses = 1;
-    let correctGuess = false;
-    let madeGuesses = [];
-
+    let numOfGuesses = 1; //start at 1
+    let correctGuess = false; //set to false until they are correct
+    let madeGuesses = []; //stores guess values
     // loops through the game until correctGuess = true
     while (correctGuess=== false){
     // prompt the user for a guess an store it 
         const guess = readlineSync.question('I have my number.. What is your guess : ');
-        
     // if user makes the same guess it tells user they've already guessed that number
         if(madeGuesses.includes(guess)){
             console.log("You've already guessed that number!")
         }
-
     // tells if guess is too high / too low/ or right on target/ 
     // prints # of guesses made and counts ++
     // stores guesses made
@@ -53,19 +49,23 @@ function randomGuess(randomNum){
         } 
 
     }
-
     goodGuesser(numOfGuesses)
 }
 
+
+
+
 // tells whether user is a good guesser or not based off # of guesses made
-function goodGuesser(num){
-    if (num>=7){
+function goodGuesser(numOfGuesses){
+    if (numOfGuesses>=7){
         console.log("Better Luck Next time")
-    } else if (num >= 3 && num <= 6){
+    } else if (numOfGuesses >= 3 && numOfGuesses <= 6){
         console.log("You can do better than that!")
-    } else if (num >= 2 && num <= 4){
+    } else if (numOfGuesses >= 2 && numOfGuesses <= 4){
         console.log("Most Impressive!")
     } else {
         console.log("You're a mind reader")
     }
 }
+
+module.exports = { randomGuess }
