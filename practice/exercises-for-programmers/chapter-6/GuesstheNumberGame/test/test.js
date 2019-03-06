@@ -1,5 +1,7 @@
 const { expect } = require('chai');
-
+const { randomGuess } = require('../src/randomGuess.js')
+// const { guessSuccess } = require('../src/guessSuccess.js')
+// const { userPrompt } = require('../src/userPrompt.js')
 
 describe('guessing game', ()=>{
     it('should pass this canary test', ()=>{

@@ -1,22 +1,4 @@
-const fs = require('fs');
-const readlineSync = require('readline-sync');
-
-console.log("Lets Play a Game >:) ...")
-
-// switch case for the type of game the user wants to play
-const levelOfDifficulty = readlineSync.question('Pick a Level of Difficulty (1, 2, or 3) : ');
-switch (levelOfDifficulty){
-    case "3":
-        randomGuess(Math.floor(Math.random() * Math.floor(1000))) //guess between 1-1000
-    break;
-    case "2":
-        randomGuess(Math.floor(Math.random() * Math.floor(100))) //guess between 1-100
-    break;
-    case "1":
-        randomGuess(Math.floor(Math.random() * Math.floor(10))) //guess between 1-10
-    break;
-}
-
+const { guessSuccess } = require('./guessSuccess.js')
 
 function randomGuess(randomNum){
     // game variables
@@ -35,37 +17,26 @@ function randomGuess(randomNum){
     // prints # of guesses made and counts ++
     // stores guesses made
         if(guess > randomNum){
-            console.log("Too High. Guess Again: " + numOfGuesses)
+            console.log(`Too High. Guess Again:  + ${numOfGuesses}`)
             madeGuesses.push(guess);
             numOfGuesses ++
+            return `Too High. Guess Again:  + ${numOfGuesses}`
         } else if(guess < randomNum){
-            console.log("Too Low. Guess Again: " + numOfGuesses )
+            console.log(`Too Low. Guess Again:  + ${numOfGuesses}`)
             madeGuesses.push(guess)
             numOfGuesses ++
+            return `Too Low. Guess Again:  + ${numOfGuesses}`
         } else {
             console.log("You've got it")
-            console.log("Number of Guesses  : " + numOfGuesses)
+            console.log(`Number of Guesses  :  + ${numOfGuesses}`)
             correctGuess = true
+            return `You've got it `
         } 
 
     }
-    goodGuesser(numOfGuesses)
+    guessSuccess(numOfGuesses)
 }
 
 
-
-
-// tells whether user is a good guesser or not based off # of guesses made
-function goodGuesser(numOfGuesses){
-    if (numOfGuesses>=7){
-        console.log("Better Luck Next time")
-    } else if (numOfGuesses >= 3 && numOfGuesses <= 6){
-        console.log("You can do better than that!")
-    } else if (numOfGuesses >= 2 && numOfGuesses <= 4){
-        console.log("Most Impressive!")
-    } else {
-        console.log("You're a mind reader")
-    }
-}
 
 module.exports = { randomGuess }
