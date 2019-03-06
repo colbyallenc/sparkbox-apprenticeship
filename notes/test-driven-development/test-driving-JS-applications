@@ -1,0 +1,135 @@
+Test Driving Javascript Applications
+03.05.19
+
+                            A     -      A     -     A     Pattern
+                        (Arrange)      (Act)     (Assert)
+                            |            |          |
+                            |            |  verify that the code 
+                       sets up whats     |     fulfills its 
+                    needed for the code  |     expectations
+                        under test       |
+                                  exercies the
+                                  code under tests 
+Chapter 1
+Automation Shall Set You Free
+
+        Automated test allow you to fail fast and safely. In the process you create resilient applications 
+        that work well in production. 
+
+        Automated testing has a deep impact on design of the code. It forces the code to be modular, 
+        cohesive, and loosely coupled. That, in turn, makes the code asier to change.  
+
+
+Challenges of Change
+
+        The Cost of Change : 
+                            These test provide continuous feddback to ensure that the design being 
+                              implemented in code meets the requirements. 
+                    
+                            Tests promote good design. 
+        The Effect Of Change :
+                            When we make a change, we should quickly know if the code that worked 
+                            before continues to work now. We need rapid, short, automated feedback 
+                            loops. 
+
+                UI Level Tests > Service Level Tests > Automated GUI-Level Tests > Manual Tests 
+                     |
+                     |_____________________               
+                                          |
+        Writing more tests at the lower levels has many benefits. The tests at the lower level run 
+        faster, they’re easier to write, and they provide shorter feedback loops. They also lead to 
+        better modular design, and as a result, it gets easier to isolate and identify problems when 
+        they happen. 
+            
+                    
+                UI Level Testing has drawbacks!
+                                                It's super brittle because its dependent on the code. 
+                                                .. if the code changes it changes. 
+
+
+How to Approach Automated Testing
+
+            Take Small Steps
+
+            Divide and Conquer : we may have to break our functions into smaller functions and drive 
+                                 each one of them throguh tests
+                    
+            Spike and Learn : If the function youre creating is familiar to you, write small test to 
+                                get it to pass
+                              If the function youre designing is new, create active isolation spikes 
+                                to learn. 
+    
+______________________________________________________________________________________________________
+Pt1. Creating Automated Test
+Chapter 2
+Test-Drive Your Design
+
+
+            beforeEach() : automatically run by Mocha before each test in that suite is excuted
+                            +  by setting a new instance of a class in a beforeEach(), each test 
+                                will get a new instance of that Class
+            afterEachr() : to perform any cleanup operations
+
+
+
+    Verify Data for Another Data Point : 
+            - test prompted us to move from the fake implementation to the real 
+            formula
+            - both tests and test suites should have single responsibility 
+          
+
+    Design with Positive, Negative, and Exception Tests
+
+        Positive tests: 
+            exercise and verify that the code does what’s expected when its 
+            preconditions are met.
+
+        Negative tests: 
+            verify that the code gracefully behaves when things don’t go as expected
+            —that is, when its preconditions or input are not valid.
+
+        Exception tests: 
+            verify that if code is supposed to throw an exception, it does in fact.
+
+
+
+    FAIR: fast, automated, isolated, and repeatable
+
+          Fast Tests:  mean fast feedback loops. If tests are slow, you’ll be 
+                        tempted to run them less often.
+
+          Automated Tests: a major benefit of tests is verification
+                          —we’ve discussed why these should be automated and not be manual.
+
+          Isolated Tests: can be run in any order, and you can also run a select few of 
+                        them as you desire or all of them. No test should require that any 
+                        other test be run before it—such tests are brittle and turn into time sinks.
+
+          Repeatable Tests: you should be able to run them any number of times without 
+                            needing manual or time-consuming setup or cleanup operations.
+
+
+Each test should take us from a delta of working code to the next delta of working 
+code with a small additional capability.
+
+
+Design Server-Side Code
+
+  Let Test Drive the Design
+    Test-driven development is not a series of mundane mechanical steps. 
+    Tests should greatly influence the design of code, through a series of questions. 
+    Tests should help us gradually uncover the details about the problem at hand and 
+    lead us to discover the interface and implementation of code to meet the requirements.
+
+Prepare for Client-Side Testing
+
+    To automatically verify the behavior of the client-side code, 
+    we have to follow a few steps: 
+        - load the code and the tests into different browsers, 
+        - execute the tests, assert expectations, 
+        - and generate a report of the run.
+
+  
+
+______________________________________________________________________________________________________
+Mantra: red, green, refactor!
