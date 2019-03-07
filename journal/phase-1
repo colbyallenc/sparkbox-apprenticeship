@@ -31,6 +31,7 @@ discover here for example. How will you choose to iterate over this array of
 arrays? You have so many methods including older more prestegious es5 methods, 
 or our very convenient es6 methods. 
 
+*** My goal this week is to be more intentional about journaling ***
 
 03.04.19
 We are coming to our final few weeks of the first stage. I get really excited to 
@@ -44,4 +45,42 @@ Two interesting convos i had today:
             I will work on going back and building test around past work
             Gary stresses that both are important in their own unique way.
 
+03.05.19
+    - sat with jhilene and gary and rebased
+        -talked aobut upcoming game project and added some more readings
+    -started.. reading Test Driving Javascript Applications
+    -downloaded Circle CI and got that up and running
+    -downloaded code climate and tested that out 
 
+03.06.19
+    - sat with gary to talk about suduko Vlaidator solution and  
+        the checkCells() 
+    - continued.. reading Test Driving Javascript Applications
+    - sat with heather and talked through everything i've worked on at this point
+    - talked with yock for a bit about OOP and TDD
+
+03.07.19
+    - had a morning session on retirement with josiah and drew
+    - continued.. reading 'Test Driving Javascript Applications'
+        - I learned to use Mocha, Chai, Karma, and Istanbul to
+         write tests, run them, and keep an eye on the coverage
+    - i paired with corinne and yock on their current php project and learned about:
+        -modifying and manipulating data (new DateTime and new Date), classes, 
+        -look into : getters and setters on classes, factory patterns
+        -refresh: types of object oriented patterns 
+        -index.php should only be only used for fetching data and storing data 
+    - Open Door with Josiah on social security, IRA, and investing  
+    - quick zoom with lidsay on lesson planning for coding for K-5   
+    - afternoon reading continuing.. 'Node.JS the Right Way' 
+
+03.08.19
+
+
+03.09.19
+    -Baskball Hackathon!!
+
+03.11.19
+03.12.19
+03.13.19
+03.14.19
+03.15.19
