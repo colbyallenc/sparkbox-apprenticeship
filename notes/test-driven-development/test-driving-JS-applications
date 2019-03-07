@@ -115,21 +115,60 @@ code with a small additional capability.
 
 Design Server-Side Code
 
-  Let Test Drive the Design
-    Test-driven development is not a series of mundane mechanical steps. 
-    Tests should greatly influence the design of code, through a series of questions. 
-    Tests should help us gradually uncover the details about the problem at hand and 
-    lead us to discover the interface and implementation of code to meet the requirements.
+    Let Test Drive the Design
+        Test-driven development is not a series of mundane mechanical steps. 
+        Tests should greatly influence the design of code, through a series of questions. 
+        Tests should help us gradually uncover the details about the problem at hand and 
+        lead us to discover the interface and implementation of code to meet the requirements.
 
-Prepare for Client-Side Testing
+    Prepare for Client-Side Testing
 
-    To automatically verify the behavior of the client-side code, 
-    we have to follow a few steps: 
-        - load the code and the tests into different browsers, 
-        - execute the tests, assert expectations, 
-        - and generate a report of the run.
+        To automatically verify the behavior of the client-side code, 
+        we have to follow a few steps: 
+            - load the code and the tests into different browsers, 
+            - execute the tests, assert expectations, 
+            - and generate a report of the run.
 
-  
+    Karma config:
+        $ node node_modules/karma/bin/karma init
+        - Testing Framework: It offers Jasmine by default; tab until you see Mocha and then hit enter.
+        - Want to use Require.js: Take the default ’no’.
+        - Browser to capture: Select Chrome and then hit enter twice.
+        - Hit enter to take the default for all other questions.
+
+        In the karma.conf.js, 
+​ 	​         // frameworks to use​
+​ 	        frameworks: [​'mocha'​, ​'chai'​],
+​ 	
+​ 	​        // list of files / patterns to load in the browser​
+        ​ 	files​:​ [
+        ​ 	  ​'./test/**/*.js'​,
+        ​ 	  ​'./src/**/*.js'​
+        ​ 	],
+            browsers: [​'Chrome'​],
+
+        $ npm test
+            to run Karma :  
+                -starts Server
+                -internally generates HTML file to launch in browser
+                -loads up JS files you mention in config
+                -starts browsers you ask for in the config
+                -runs test
+                -reports the results
+
+        ...you’ll see Chrome pop up and execute the test. 
+        Then Karma sits there waiting for you to make a code or test change. 
+        If you want to run the tests just once, and shut down the browser(s) 
+        automatically at the end, change the test command in the package.json 
+        file to add the --single-run option, like so:
+    
+        "scripts"​​:​ {
+    ​ 	  ​"test"​​:​ ​"karma start --reporters clear-screen,dots,coverage --single-run"​
+    ​ 	},
+
+______________________________________________________________________________________________________
+Chapter 3
+Test Asychrony 
 
 ______________________________________________________________________________________________________
 Mantra: red, green, refactor!
