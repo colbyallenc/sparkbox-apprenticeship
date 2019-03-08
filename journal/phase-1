@@ -31,6 +31,8 @@ discover here for example. How will you choose to iterate over this array of
 arrays? You have so many methods including older more prestegious es5 methods, 
 or our very convenient es6 methods. 
 
+
+____________________________________________________________________________________
 *** My goal this week is to be more intentional about journaling ***
 
 03.04.19
@@ -74,13 +76,22 @@ Two interesting convos i had today:
     - afternoon reading continuing.. 'Node.JS the Right Way' 
 
 03.08.19
+    - this morning I've spent time putting thought into what kind of game
+        i'd like to create
+    - continue reading.. 'Node.JS the Right Way'
+    - cooking with Katy :) 
+    - today i learned how to use key Node.js classes, including 
+        EventEmitter, Stream, ChildProcess, and Buffer. I also have 
+        firsthand experience writing asynchronous callback functions 
+        and coding for the event loop.
 
 
 03.09.19
     -Baskball Hackathon!!
-
+____________________________________________________________________________________
 03.11.19
 03.12.19
 03.13.19
 03.14.19
 03.15.19
+____________________________________________________________________________________
