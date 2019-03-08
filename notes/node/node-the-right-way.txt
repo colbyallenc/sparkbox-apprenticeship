@@ -62,8 +62,124 @@ ________________________________________________________________________________
 
 Part one
 Chapter 2
+    
+    Arrow Function Expression ()=> {} : 
+        - have a terser syntax than older function expression 
+        - they do not create a new scope for 'this'
 
-Wrangling the File System:
+    Visualizing the Event Loop
+        The event loop spinds until there is nothing to do
 
-    Watching for file chnages: .watch()
+    Template Strings : ${ filename }
 
+    Spawning a Child process:
+            “use strict'​;
+        ​ 	​const​ fs = require(​'fs'​);
+        ​ 	​const​ spawn = require(​'child_process'​).spawn;
+        ​ 	​const​ filename = process.argv[2];
+        ​ 	
+        ​ 	​if​ (!filename) {
+        ​ 	  ​throw​ Error(​'A file to watch must be specified!'​);
+        ​ 	}
+        ​ 	
+        ​ 	fs.watch(filename, () => {
+        ​ 	  ​const​ ls = spawn(​'ls'​, [​'-l'​, ​'-h'​, filename]);
+        ​ 	  ls.stdout.pipe(process.stdout);
+        ​ 	});
+        ​ 	console.log(​`​​Now watching ​​${​filename​}​​ for changes...`​);
+
+        Save the file as watcher-spawn.js and run it with node as before:
+
+        ​ 	​$ ​​node​​ ​​watcher-spawn.js​​ ​​target.txt​
+        ​ 	Now watching target.txt for changes...
+
+        If you go to a different console and touch the target file, your Node.js program will produce something like this:
+
+        ​ 	-rw-rw-r-- 1 jimbo jimbo 6 Dec  8 05:19 target.txt”
+    
+
+    Capturing Data from an EventEmitter:
+        EventEmitter is a very important class in Node. 
+            a channel for events to be dispatched and listerners to be notified.
+            many objects in NOde inherit from Event EMitter, like Streams*
+
+            “filesystem/watcher-spawn-parse.js
+            ​ 	fs.watch(filename, () => {
+            ​ 	  ​const​ ls = spawn(​'ls'​, [​'-l'​, ​'-h'​, filename]);
+            ​ 	  ​let​ output = ​''​;
+            ​ 	
+            ​ 	  ls.stdout.on(​'data'​, chunk => output += chunk);
+            ​ 	
+            ​ 	  ls.on(​'close'​, () => {
+            ​ 	    ​const​ parts = output.split(​/​​\s​​+/​);
+            ​ 	    console.log([parts[0], parts[4], parts[8]]);
+            ​ 	  });
+            ​ 	});”
+
+          run it..   
+            “$ ​​node​​ ​​watcher-spawn-parse.js​​ ​​target.txt​
+        ​ 	Now watching target.txt for changes...
+        ​ 	[ '-rw-rw-r--', '0', 'target.txt' ]”
+
+    Event listerners
+        a callback function that is invoked when an 
+        event of a specified type is dispatched.
+
+        Since the Stream class inherits from EventEmitter, 
+        we can listen for events from the child process’s standard output stream:
+
+            ls.stdout.on(​'data'​, chunk => output += chunk);”
+
+        When an arrow function takes a exactky one parameter, 
+        you can omit the parenthesis arounf the param.
+
+        .on() 
+            adds a listener for the specified event type
+        
+        We listen fir data events because we're interested in 
+        data coming out of the stream
+
+        Events can send laong extra information which arrives in 
+        the formof parameters to the callbacks
+        
+        data events pass along a Buffer objects 
+            each time we het a chunk of data, we append it to our output
+
+    Buffer 
+        Node's way of representing binary data
+        It points to a blob of memory allocated by Node's 
+            native core
+        Buffers cant be resized and require encoding and 
+            decoding to convert to and from JS Strings
+        
+
+        Like Stream, the ChildProcess class extends EventEmitter, 
+        so we can add listeners to it, as well.
+
+        ​ 	ls.on(​'close'​, () => {
+        ​ 	  ​const​ parts = output.split(​/​​\s​​+/​);
+        ​ 	  console.log([parts[0], parts[4], parts[8]]);
+        ​ 	});
+    
+Reading and Writing Files Asynchronously:
+
+        “use strict'​;
+        ​ 	​const​ fs = require(​'fs'​);
+        ​ 	fs.readFile(​'target.txt'​, (err, data) => {
+        ​ 	  ​if​ (err) {
+        ​ 	    ​throw​ err;
+        ​ 	  }
+        ​ 	  console.log(data.toString());
+        ​ 	});
+        Save this file as read-simple.js and run it with node:
+
+        ​ 	​$ ​​node​​ ​​read-simple.js​”
+
+
+    
+
+
+_______________________________________________________________________________________________________________________
+Look into...
+
+streams
