@@ -176,7 +176,100 @@ Reading and Writing Files Asynchronously:
         ​ 	​$ ​​node​​ ​​read-simple.js​”
 
 
+Blocking the Event Loop with Synchronous File Access
+
+    const​ fs = require(​'fs'​);
+    ​ 	​const​ data = fs.readFileSync(​'target.txt'​);
+    ​ 	process.stdout.write(data.toString());
+
+_______________________________________________________________________________________________________________________
+Chapter 3
+Networking with Sockets
+
+    Develop a basic TCP server program
+
+    Listening for Socket Connections
+
+        Networked Services exist for two reasons:
+            1) connect enpoints 
+            2) transmit information between them 
+        
+        Binding a Server to a TCP Port
+
+            TCP socket connections consist of two endpoints:
+                one endpoint binds to a numbered Port
+                the other enpoint connects to a Port
+            
+            The bind and connect operations are provided by the
+            net module
+
+            Binding a TCP port to listen for connections looks like this:
+                
+                'use strict'​;
+                ​ 	​const​
+                ​ 	  net = require(​'net'​),
+                ​ 	  server = net.createServer(connection => {
+                ​ 	    ​// Use the connection object for data transfer.​   ___ 
+                ​ 	  });                                                    |   
+                ​ 	server.listen(60300);                                    |   
+                                                                            |
+                net.createServer:                                           |    
+                    takes a callback function and returns a Server object   |
+                                                                            |      
+                connection parameter: is a Socket object that you can use ---
+                        to send of receive data  
+
+                calling server.listen() binds the specified port
+
+            __________                                _________
+           |  client  |  _________                   | server  |
+           |__________|           |       _______    |---------|
+                                  |______|  TCP  |___| node.js |
+            __________            |      |_______|   | process |       
+           |  client  |  _________|                  |_________|   
+           |__________|
+
+
+    Connecting to a TCP Socket Server with Netcat  
+
+        In your first terminal, use the watch command to touch the target file at one-second intervals:
+
+        ​ 	​$ ​​watch​​ ​​-n​​ ​​1​​ ​​touch​​ ​​target.txt​
+        With that running, in a second terminal, run the net-watcher program:
+
+​ 	​       $ ​​node​​ ​​net-watcher.js​​ ​​target.txt​
+​ 	         Listening for subscribers...
+        This program creates a service listening on TCP port 60300. 
+        To connect to it, we’ll use netcat, a socket utility program. 
+        Open a third terminal and use the nc command like so:
+
+​      	​   $ ​​nc​​ ​​localhost​​ ​​60300​
+​ 	        Now watching "target.txt" for changes...
+​ 	        File changed: Wed Dec 16 2015 05:56:14 GMT-0500 (EST)
+​ 	        File changed: Wed Dec 16 2015 05:56:19 GMT-0500 (EST)”
+
+    Implementing a Messaging Protocol
+
+        protocol - a set of rules that defines hoe enpoints in a system communicate
+            Any  time you develop a networked application in Node.js, youre working 
+            with one or more protocols
+        
+    Serializing Messages with JSON
+        ..refer to 'net-watcher-json-service.js'
+
+
+    Creating Socket Client Connections
+        ..refer to 'net-watcher-json-client.js'
+
     
+Testing Network Application Functionality
+
+    Understanding the Message-Boundary Problem
+        The LDJ protocol seperates messages with newline characters
+        Each new line character is the boundary between two messages
+
+    Implementing a Test Service
+        
 
 
 _______________________________________________________________________________________________________________________
