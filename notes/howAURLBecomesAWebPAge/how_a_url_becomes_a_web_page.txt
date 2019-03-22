@@ -1,0 +1,85 @@
+How a URL Becomes a WebPage
+03.20
+
+Uniform Resoucre Language               takes away whitepsace
+                                          |
+http://      google.com  /picture ?q=cat&w=1
+  |               |         |       |
+  |             host       path     |
+  |            server               |
+  |      DNS (Domain Naming System) |
+scheme                              |
+protocol                        query parameters
+tells you what kind of info         
+youre looking for
+others: ftp, https
+
+How do computers find eachother?
+    Internet --> 
+        IP Address- format to find computer
+        the path is necesary for the route to occur
+        Load Balancer - main server than essentially balance out 
+                            the request to smaller servers
+                        Important to get server updates quickly so that 
+                            you dont have to take time to update the DNS
+                        Self Repairing
+        all servers have an IP address
+
+DNS Server 
+    1. Resolve DNS -- when DNS servers basically go 
+        hunting and returns an IP address
+    2. (HTTPS) Exchange Cypher keys 
+    3. (HTTP) Send a request (req) (they come in the form of GET/POST)
+        
+        HTTP Request :
+                    [url] [method][protocol]
+                    [headers] (which are usually key/value pairs)
+                    [body]
+            Headers :
+                    accept 
+                    authorization 
+                    body
+
+            Methods :
+                GET  --
+                    a mechanism to talk to the server) - URL
+                    comes with
+                POST --
+                    adding new information 
+                    all of the content youre sending to the server
+                    google.com/images/new
+                PUT --
+                    less commonly used
+                    replace information 
+                    google.com.images/12
+                PATCH --
+                    modify information
+                DELETE --
+                    deletes content
+    4. (HTTP) Reponse (res)
+                        status (statuses status code):
+                            2XX - everything works  
+                                    (200, 202) 
+                            3XX - redirects 
+                                    (300, 301 -permanent redirect, 302- temp redirect) 
+                            4XX - client Side Error 
+                                    (401 - unauthorized, 403-wrong credientials, 404-page doesnt exist)
+                            5XX - server Side Error 
+                                    (504-gateway timeout)
+
+NetCat:
+    Describes the http protocols
+    nc 
+______________________________________
+Post Talk Notes:
+
+Neat Tools:
+    Ping, 
+    Tracert (trace route), 
+    Curl,
+    Network Tab in Browser (got to get and post/copy them into the broswer)
+    NSLookup,
+    Postman,
+    NetCat (http1 tool that runs in the command line)
+
+NS Lookup google.com
