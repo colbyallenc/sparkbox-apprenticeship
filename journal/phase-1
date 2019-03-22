@@ -117,8 +117,44 @@ ________________________________________________________________________________
 03.14.19
     -continued working on CLI Battleship game
     -zoom with yosev to pair on CLI Battleship
-    -sat in on gary and jhilene's morning talk about her tic tac toe game
+    -sat in on gary and jhilene's morning talk about her tictactoe game
     -continue working throguh CLI Battleship game
+        -built up acceptance test for game
     
 03.15.19
+    -paired with Jhilene on her CLI TicTacToe Game Test
+    -joined Yosev and Bryans pairing
+        -tried to unfold an odd ternary functions
+    -All-Teams Meeting
+    -paired with Corinne
+        -Setup 404 redirect functionality and add that to Colby's PR
+        -Test Kindling with VO, NVDA, and Keyboard
+        -Start working on the a11y carousel
+    -continue working through CLI Battleship
+        -began unit testing on board.js
+____________________________________________________________________________________
+03.18.19
+    -Continue working on Battleship Game
+    -Paired with Ryan about next steps
+    -DECA Workshop
+    -Ended my day early
+03.19.19
+    -Continue working through BattleshipCLI Game
+    -Created an 8 minute video describing my game so far and Mocking
+    -DECA Workshop
+    -paired with ryan on Battleship Game
+    -Continued working through Game
+03.20.19
+    -Continue working through BattleshipCLI Game
+    -GEM City JS meetup
+    -DECA Workshop
+    -Continued working through Game
+03.21.19
+    -Continue working through BattleshipCLI Game
+    -Pair with Gary on Seer and talking through mockist vs top down
+    -DECA Workshop
+    -Continued working through Game
+    -Pair with Corinne on DECA, reviewing notes and discssing my game
+03.22.19
+    -
 ____________________________________________________________________________________
