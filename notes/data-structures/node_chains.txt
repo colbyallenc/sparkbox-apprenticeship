@@ -1,0 +1,8 @@
+The Node:
+    the basic building block
+    fulfills two function
+        1) holds value
+        2) provides a pointer
+
+     
+

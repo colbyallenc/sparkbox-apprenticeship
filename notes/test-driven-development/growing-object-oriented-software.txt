@@ -1,0 +1,16 @@
+verification vs design
+
+The Bigger Picture
+    When implemmenting a feature we want to write an acceptance test 
+        that exercises the functionality we want to build
+        an acceptance test demonstrates that te system does not implemet 
+            that feature
+        We use acceptance test to write code thats direct;y relevant 
+    
+    Under apprectance test, we follow the unit level test/implement/refactor 
+    cycle to develop the feature
+
+                                    --------->
+                                    |
+    Write a failing -----------> Write a  
+    acceptance test             unit test

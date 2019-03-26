@@ -1,0 +1,35 @@
+HTML with Melissa and Lindsey
+
+Julie- SEO Optimization
+
+scripts go at bottom of <body> or in the <head>
+
+<link> for stylsheets, favicons, 
+
+<body>
+    semantic html helps with readbility 
+    maps to aria
+    
+    <header> : intro, navigation aids
+    <section> : groups together related content
+    <article> : self-contained related information/ 
+        it cannot rely on other pieces of the page
+    rss feed?
+    <aside> : seperate from main content
+    <footer>
+    <a> : you can wrap anchor tags around elements
+    <picture> : wrap multiple pictures ith diff widths and srcs
+    <video> : set src, looping, play/pause
+    <forms>
+        input : wrap input in label for radio buttons to make entire thing clickable
+        label :
+    <button> : buttons do / you can give your button functionality
+    <link> : links go
+    <aria> : accessible rich internet applications
+    
+    validation - checks html to make sure everything is validation
+
+
+    
+
+
