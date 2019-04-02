@@ -1,0 +1,79 @@
+A Dao of Web Design, John Allsopp
+
+Adaptability is accessibility
+The best of man is like water,
+Which benefits all things, and does not contend with them,
+Which flows in places that others disdain,
+Where it is in harmony with the Way.
+Tao Te Ching; 8 Water
+
+        "one should wander, without plan, 
+        allowing for things to happen and to respond to them. 
+        I think of it as saying we should not be fixed in our outlook, 
+        with goals far ahead, 
+        rather we should be adaptable, not fixed in our views or direction."
+
+Adaptability is accessibility
+The best of man is like water,
+Which benefits all things, and does not contend with them,
+Which flows in places that others disdain,
+Where it is in harmony with the Way.
+
+        make pages which are adaptable. 
+        Make pages which are accessible, 
+        regardless of the browser, 
+        platform or screen that your reader chooses 
+        or must use to access your pages. 
+
+        pages which are legible regardless 
+        of screen resolution or size, 
+        or number of colors 
+        (and remember too that pages may be printed, 
+        or read aloud by reading software, 
+        or read using braille browsers). 
+
+        pages which adapt to the needs of a reader, 
+        whose eyesight is less than perfect, 
+        and who wishes to read pages with a very large font size.
+
+        Designing adaptable pages is designing accessible pages. 
+        And perhaps the great promise of the web, 
+        far from fulfilled as yet, is accessibility, 
+        regardless of difficulties, to information.
+
+
+The Way
+The Way is shaped by use,
+But then the shape is lost.
+Do not hold fast to shapes
+But let sensation flow into the world
+As a river courses down to the sea.
+
+
+
+The Journey
+Yet a tree broader than a man can embrace is born of a tiny shoot;
+A dam greater than a river can overflow starts with a clod of earth;
+A journey of a thousand miles begins at the spot under one’s feet.
+
+“Closely held beliefs are not easily released.”
+The journey begins by letting go of control, and becoming flexible.
+
+
+
+__________________________________________________________
+I often find myself using programming as a metaphor to many things in life. 
+After reading 'A Dao of Web Design', I quickly semented that the idea that, yes, 
+I am not crazy. Programming ideas could be used as metaphors to life. 
+"The journey begins by letting go of control, and becoming flexible."
+I recently had a convseration with Ben about my goal and how I go through 
+life without one fixed goal. I allow myself to adapt to life and wander, 
+without a plan. After putting this idea into words and saying it outloud,
+I quickly became embarrased, 'How could i just wander through life 
+without a plan?'.
+
+If find that this approach allows opportunity to become accessible.
+If I move through life with one absolute goal, I may not be as flexible, 
+rather static and fixed in my outlook. 
+
+
