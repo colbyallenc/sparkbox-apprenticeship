@@ -1,0 +1,14 @@
+Create short videos on:
+			accesible toggle
+			creating an accessible section cardtesting jsdom with corinne
+
+Upload videos (lunch)
+
+Make notes on videos:
+			battleship cli game
+			
+			nana and jon
+			jsdom testing video
+            aria-toggle
+
+**Testing Writing
