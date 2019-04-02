@@ -1,13 +1,53 @@
 03.25.19
-    - PluralSight HTML videos
-    - HTML Readongs: Dao
-    - Interesting Discussion with Yosev on OOP vs Function Programming
-    
+    -PluralSight HTML videos
+    -HTML Readongs: Dao of Web Design 
+    -Interesting Discussion with Yosev on OOP vs Function Programming
+    -Paired with Nana and Jon on client side TVOS testing 
+    -Started reading 'Growing Object Oriented Software Guided by Tests"
+
+
 03.26.19
+    -Continued my reading on 'Growing Object Oriented Software Guided by Tests"
     -App Code Session: HTML with Melissa and Wild
     -Reading: Growing Object Oriented Software, Guided by Test
     -Pair with Andrew
+        -We discussed background-image CSS property vs <img> : 
+            when and why to use each
+    -Continued my reading on 'Growing Object Oriented Software Guided by Tests"
+
 
 03.27.19
-03.28.19
+    -Continued my reading on 'Growing Object Oriented Software Guided by Tests"
+    -Pair with Gary on Seer Project
+        -We talked about Hexagonal Architecture. 
+        -Its important to abstract code away for a system 
+        -Gary's RAILS project
+    -Pair with Heather 
+        -She's building a page full f components on the Seer RAILS App
+        -She's working on a component that uses @mixins and is having trouble
+            scaling a hexagon with a number inside of it
+    -Continued going way too far on HTML card
+    -Continued my reading on 'Growing Object Oriented Software Guided by Tests"
+
+03.28.19 (WFH) 
+    -Continued my reading on 'Growing Object Oriented Software Guided by Tests"
+    -Worked through html card for the entirety of the day
+    -Worked on BIT: CCB Meetup Material
+    -Worked through creating videos for emily and Blog post on Medium
+    -Continued my reading on 'Growing Object Oriented Software Guided by Tests"
+
+
 03.29.19
+    -Paired with Lidnsey Wild on HTML Semantics
+        Got some good feedback on why its important to 
+            have an alt property in <img>
+    -All Team Coffee Hour
+    -Paired with Yock on Hexagonal Architecture (video on this)
+        -We created an example describing why abstractions play a large
+        role in why hexagonal arhcitecture is so powerful
+        -Get with him about the name of that binary book!!!
+    -Continued my reading on 'Growing Object Oriented Software Guided by Tests"
+
+____________________________________________________________________
+
+
