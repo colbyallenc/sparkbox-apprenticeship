@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 20em;
+  height: 20em;
+  background-image: url("https://media.altpress.com/uploads/2018/08/blink-182.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; /*keeps everything inside of the container */
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  z-index: 3;
+  position: relative;
+}
+
+.color-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #a0adb2;
+  opacity: 0.9;
+  position: absolute;
+}
+
+.event-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.event-date {
+  height: 2.5em;
+  width: 2.5em;
+  font-size: 1.7em;
+  text-align: center;
+  border-right: 3px solid black;
+}
+
+.event-address {
+  width: 14em;
+  height: 6em;
+  /*   border: 1px solid black; */
+  padding-left: 1em;
+  font-size: 1em;
+  line-height: 1.4em;
+  padding-top: 1.7em;
+}
+
+.event-buttons {
+  width: 100%;
+  height: 4em;
+  /*   border: 1px solid black; */
+  position: absolute;
+  bottom: 0px;
+  display: none;
+}
+
+button {
+  width: 50%;
+  height: 100%;
+  float: left;
+  font-size: 1.3em;
+}
+
+.event-button-details {
+  background-color: #a8a497;
+}
+
+.event-button-getTicket {
+  background-color: #f4cb42;
+}
+
+.event-button-details:hover{
+  background-color: #8e8b7f;
+} 
+
+.event-button-getTicket:hover{
+  background-color:#ffde75;
+}
+
+.event-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.container:hover {
+  color:white;
+}
+.container:hover .event-date{
+  border-right: 3px solid black;
+}
+
+.container:hover .color-overlay {
+  background-color: #302f2e;
+}
+
+.container:hover .event-info {
+  bottom: 3em;
+}
+
+.container:hover h1 {
+  font-size: 2.9em;
+  top: 1em;
+}
+
+.container:hover .event-buttons {
+  display: block;
+}
