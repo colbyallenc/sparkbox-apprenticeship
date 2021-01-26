@@ -14,42 +14,35 @@
 
 cakes({flour: 500, sugar: 200, eggs: 1}, {sugar: 1200, eggs: 5, flour: 1200}); 
 
+function cakes(recipe, available) {
+  //declare variable to store the keys of the two objects passed in the funciton 
+  let recipeArray = Object.keys(recipe)
+  let availableArray = Object.keys(available)
 
-function cakes(recipe, available){
-
-  let entries = Object.entries(recipe).sort()
-  let availableEntries = Object.entries(available).sort()
+  // declare an empty array that will store the quotiets of availableIngredients/recipeIngredients
+  let howManyCakesCanIMake = []
+   
+  //check to see if whats require in the recipe exists in available ingredients / returns boolean
+  let doesAvailableExist = recipeArray.every((recipeItems) => {
+    return availableArray.includes(recipeItems)
+  })  
   
-
-  let a = Object.keys(recipe).sort()
-  let b = Object.keys(available).sort()
-
-//compare to see if the keys in recipe match with available
-  let i = a.length
-
-  if (i != b.length) return false;
-
-    while (i--) {
-        if (a[i] !== b[i]) return false;
+  //if everything exists, divide avaiable by recipe to see how many cakes we can make
+  if(doesAvailableExist){
+         for (let val in available) {
+          //  i had to add this line because sometimes recipe has undefined values
+          if(recipe[val] !== undefined)
+           howManyCakesCanIMake.push(Math.floor(available[val]/recipe[val]))
+          
         }
-
-   let d= Object.values(recipe)
-   let c = Object.values(available)
-
-      console.log(d)
-      console.log(c)
-
-    let result = c.map(function(n, i) { return n / d[i]; });
-    console.log(result)
-// divide available/receipe
-
-
-// store the lowest quotent
-// let howManyCakes = 
-
-
+      }
+    //returns the smallest number from the array
+    //the smallest number will tell us how many cakes we can make
+    return Math.min(...howManyCakesCanIMake)
 }
 
+cakes({flour: 500, sugar: 200, eggs: 1}, 
+{flour: 1200, sugar: 1200, eggs: 5, milk: 200, waffles: 5, bacon: 300, soy: 1200, chocolate: 5, milk: 200, sprinkles: 5, gummies: 300});
 
   
   
